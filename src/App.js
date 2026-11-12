@@ -241,7 +241,10 @@ export function App() {
             >
               <${Icon} name="Menu" size=${18} />
             </button>
-            <span className="font-extrabold text-brand-600 text-base">TelcoPro B2B</span>
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-0.5 rounded-md bg-brand-600 text-white font-black text-xs lowercase tracking-tight">ooredoo</span>
+              <span className="font-extrabold text-slate-900 text-sm">Business CRM</span>
+            </div>
           </div>
           ${pendingRenewalsCount > 0 &&
           html`

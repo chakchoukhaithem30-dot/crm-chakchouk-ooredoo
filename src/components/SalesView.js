@@ -98,7 +98,7 @@ function EndOfMonthReportModal({ monthKey, sales, settings, onClose }) {
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 border-b-2 border-brand-600 pb-5">
             <div>
               <div className="text-xs font-extrabold uppercase tracking-widest text-brand-600">
-                TelcoPro B2B · Direction Grands Comptes
+                Ooredoo Business · Direction Grands Comptes
               </div>
               <h2 className="text-2xl font-extrabold text-slate-900 mt-1">
                 Rapport Mensuel des Réalisations

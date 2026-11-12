@@ -48,25 +48,25 @@ export const EMAIL_TEMPLATES = [
     id: 'tpl-renewal',
     name: 'Relance Renouvellement Contrat',
     subject: 'Échéance contrat {{entreprise}} — Proposition d’optimisation Télécom',
-    body: `Bonjour {{vis_a_vis}},\n\nVotre contrat actuel ({{service}}) pour {{entreprise}} arrive à échéance le {{date_echeance}}.\n\nEn tant que votre Chargé de Grands Comptes dédié, je souhaite vous proposer un point rapide cette semaine afin d’optimiser vos débits, sécuriser votre connectivité et vous faire bénéficier de nos nouvelles conditions Grands Comptes.\n\nQuelles sont vos disponibilités mardi ou jeudi matin ?\n\nCordialement,\nChargé de Grands Comptes B2B`,
+    body: `Bonjour {{vis_a_vis}},\n\nVotre contrat actuel ({{service}}) pour {{entreprise}} arrive à échéance le {{date_echeance}}.\n\nEn tant que votre Chargé de Grands Comptes dédié, je souhaite vous proposer un point rapide cette semaine afin d’optimiser vos débits, sécuriser votre connectivité et vous faire bénéficier de nos nouvelles conditions Grands Comptes.\n\nQuelles sont vos disponibilités mardi ou jeudi matin ?\n\nCordialement,\nChargé de Grands Comptes · Ooredoo Business`,
   },
   {
     id: 'tpl-fiber-sdwan',
     name: 'Offre Fibre Dédiée & SD-WAN',
     subject: '{{entreprise}} : Haute disponibilité Fibre + SD-WAN multi-sites',
-    body: `Bonjour {{vis_a_vis}},\n\nDans le cadre de l’accompagnement des entreprises du secteur, nous déployons actuellement des architectures Fibre Optique Dédiée avec bascule automatique SD-WAN 5G pour garantir 99,95% de continuité de service.\n\nJe serais ravi de réaliser un audit gratuit de l’infrastructure de {{entreprise}} et de vous présenter une simulation tarifaire sur mesure.\n\nBien cordialement,\nChargé de Grands Comptes B2B`,
+    body: `Bonjour {{vis_a_vis}},\n\nDans le cadre de l’accompagnement des entreprises du secteur, nous déployons actuellement des architectures Fibre Optique Dédiée avec bascule automatique SD-WAN 5G pour garantir 99,95% de continuité de service.\n\nJe serais ravi de réaliser un audit gratuit de l’infrastructure de {{entreprise}} et de vous présenter une simulation tarifaire sur mesure.\n\nBien cordialement,\nChargé de Grands Comptes · Ooredoo Business`,
   },
   {
     id: 'tpl-fleet-5g',
     name: 'Upgrade Flotte Mobile 5G',
     subject: 'Nouveaux forfaits Flotte Corporate 5G pour {{entreprise}}',
-    body: `Bonjour {{vis_a_vis}},\n\nNous lançons nos nouvelles offres Flotte Mobile Corporate 5G avec roaming Business inclus et gestion centralisée des lignes.\n\nPour {{entreprise}}, cela représente une opportunité immédiate de gain de productivité pour vos équipes terrain tout en maîtrisant votre budget mensuel.\n\nPouvons-nous planifier un appel de 15 minutes ?\n\nCordialement,\nChargé de Grands Comptes B2B`,
+    body: `Bonjour {{vis_a_vis}},\n\nNous lançons nos nouvelles offres Flotte Mobile Corporate 5G avec roaming Business inclus et gestion centralisée des lignes.\n\nPour {{entreprise}}, cela représente une opportunité immédiate de gain de productivité pour vos équipes terrain tout en maîtrisant votre budget mensuel.\n\nPouvons-nous planifier un appel de 15 minutes ?\n\nCordialement,\nChargé de Grands Comptes · Ooredoo Business`,
   },
   {
     id: 'tpl-anniversary',
     name: 'Anniversaire de Partenariat',
     subject: 'Merci pour votre confiance — Bilan annuel {{entreprise}}',
-    body: `Bonjour {{vis_a_vis}},\n\nNous célébrons bientôt une nouvelle année de partenariat avec {{entreprise}}.\n\nJe tenais à vous remercier personnellement pour votre confiance et vous proposer notre revue annuelle de performance (QoS, SLA, facturation et axes d’évolution).\n\nAu plaisir d’échanger très prochainement,\nChargé de Grands Comptes B2B`,
+    body: `Bonjour {{vis_a_vis}},\n\nNous célébrons bientôt une nouvelle année de partenariat avec {{entreprise}}.\n\nJe tenais à vous remercier personnellement pour votre confiance et vous proposer notre revue annuelle de performance (QoS, SLA, facturation et axes d’évolution).\n\nAu plaisir d’échanger très prochainement,\nChargé de Grands Comptes · Ooredoo Business`,
   },
 ];
 
@@ -455,7 +455,7 @@ export function createInitialSeedData() {
       monthlyTargetMrc: 40000,
       alertThresholdDays: 60,
       managerName: 'Haithem Chakchouk',
-      managerRole: 'Chargé de Grands Comptes B2B',
+      managerRole: 'Chargé de Grands Comptes · Ooredoo Business',
     },
   };
 }
