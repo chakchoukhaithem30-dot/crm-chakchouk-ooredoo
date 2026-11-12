@@ -1,0 +1,53 @@
+[debug] [2026-11-12T16:29:05.651Z] ----------------------------------------------------------------------
+[debug] [2026-11-12T16:29:05.653Z] Command:       /usr/local/nvm/versions/node/v26.13.0/bin/node /home/chakchouk_haithem30/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase init hosting:github --project crm-chakchouk-ooredoo-5b206
+[debug] [2026-11-12T16:29:05.654Z] CLI Version:   15.36.0
+[debug] [2026-11-12T16:29:05.654Z] Platform:      linux
+[debug] [2026-11-12T16:29:05.654Z] Node Version:  v26.13.0
+[debug] [2026-11-12T16:29:05.654Z] Detected Agent: unknown
+[debug] [2026-11-12T16:29:05.654Z] Time:          Thu Nov 12 2026 16:29:05 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-11-12T16:29:05.654Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/chakchouk_haithem30/telco-crm
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-11-12T16:29:07.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-11-12T16:29:07.595Z] > authorizing via signed-in user (chakchouk.haithem30@gmail.com)
+[debug] [2026-11-12T16:29:07.616Z] Checked if tokens are valid: false, expires at: 1794501544360
+[debug] [2026-11-12T16:29:07.617Z] Checked if tokens are valid: false, expires at: 1794501544360
+[debug] [2026-11-12T16:29:07.617Z] > refreshing access token with scopes: []
+[debug] [2026-11-12T16:29:07.620Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-11-12T16:29:07.620Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-12T16:29:07.681Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-11-12T16:29:07.681Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-11-12T16:29:07.692Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/crm-chakchouk-ooredoo-5b206 [none]
+[debug] [2026-11-12T16:29:07.987Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/crm-chakchouk-ooredoo-5b206 200
+[debug] [2026-11-12T16:29:07.987Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/crm-chakchouk-ooredoo-5b206 {"projectId":"crm-chakchouk-ooredoo-5b206","projectNumber":"1055630367112","displayName":"CRM CHAKCHOUK OOREDOO","name":"projects/crm-chakchouk-ooredoo-5b206","resources":{"hostingSite":"crm-chakchouk-ooredoo-5b206"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_d58a2bb0-8228-41c1-9e71-a37651cc4a62"}
+[info] i  Using project crm-chakchouk-ooredoo-5b206 (CRM CHAKCHOUK OOREDOO) . 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /home/chakchouk_haithem30/telco-crm 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=764099457&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
