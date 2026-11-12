@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TelcoPro CRM — Grands Comptes B2B</title>
+  <script src="./vendor/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#FFF1F1',
+              100: '#FFE0E0',
+              200: '#FFC7C7',
+              300: '#FF9E9E',
+              400: '#FF5C5C',
+              500: '#F01D1D',
+              600: '#E60000',
+              700: '#C40000',
+              800: '#9E0000',
+              900: '#7D0404',
+            }
+          },
+          fontFamily: {
+            sans: ['"Segoe UI"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    ::-webkit-scrollbar { width: 7px; height: 7px; }
+    ::-webkit-scrollbar-track { background: #f8fafc; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    @media print {
+      body { background: #ffffff !important; }
+      .no-print { display: none !important; }
+      .print-only-area {
+        position: static !important;
+        width: 100% !important;
+        max-width: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-100 selection:text-brand-800">
+  <div id="root"></div>
+
+  <script src="./vendor/react.production.min.js"></script>
+  <script src="./vendor/react-dom.production.min.js"></script>
+  <script src="./vendor/htm.umd.js"></script>
+  <script src="./vendor/xlsx.full.min.js"></script>
+  <script src="./vendor/lucide.min.js"></script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
+
