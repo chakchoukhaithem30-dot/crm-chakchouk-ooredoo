@@ -12,6 +12,8 @@ export function Sidebar({
   isOpenMobile,
   onCloseMobile,
   onResetDemo,
+  userEmail,
+  onLogout,
 }) {
   const navItems = [
     {
@@ -163,7 +165,7 @@ export function Sidebar({
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-sm font-semibold truncate">${managerName}</div>
-              <div className="text-[11px] text-white/75 truncate">${managerRole}</div>
+              <div className="text-[11px] text-white/75 truncate">${userEmail || managerRole}</div>
             </div>
             <button
               type="button"
@@ -173,6 +175,16 @@ export function Sidebar({
             >
               <${Icon} name="RotateCcw" size=${15} />
             </button>
+            ${onLogout && html`
+              <button
+                type="button"
+                onClick=${onLogout}
+                title="Se déconnecter"
+                className="p-1.5 rounded-lg text-white/75 hover:text-white hover:bg-white/15 transition-colors"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+              </button>
+            `}
           </div>
         </div>
       </aside>

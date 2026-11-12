@@ -9,8 +9,11 @@ import { ProspectionView } from './components/ProspectionView.js';
 import { ClientDetailModal } from './components/ClientDetailModal.js';
 import { ImportMappingModal } from './components/ImportMappingModal.js';
 import { Icon } from './components/Icons.js';
+import { LoginView } from './components/LoginView.js';
+import { subscribeAuth, logoutUser } from './utils/firebaseAuth.js';
 
 export function App() {
+  const [authUser, setAuthUser] = useState(undefined);
   const [state, setState] = useState(() => loadCRMState());
   const [activeTab, setActiveTab] = useState('dashboard');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,6 +24,14 @@ export function App() {
   const [importPayload, setImportPayload] = useState(null);
   const [importBanner, setImportBanner] = useState('');
   const [preselectedEmailDraft, setPreselectedEmailDraft] = useState(null);
+
+  useEffect(() => {
+    let unsub = () => {};
+    subscribeAuth((user) => setAuthUser(user || null))
+      .then((fn) => { unsub = fn; })
+      .catch(() => setAuthUser(null));
+    return () => unsub();
+  }, []);
 
   useEffect(() => {
     saveCRMState(state);
@@ -213,6 +224,21 @@ export function App() {
     setImportBanner('Données de démonstration réinitialisées.');
   };
 
+  if (authUser === undefined) {
+    return html`
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="text-center space-y-3">
+          <div className="inline-flex px-3.5 py-2 rounded-2xl bg-brand-600 text-white font-black text-base lowercase shadow-md">ooredoo</div>
+          <p className="text-xs font-semibold text-slate-500">Vérification de la session...</p>
+        </div>
+      </div>
+    `;
+  }
+
+  if (!authUser) {
+    return html`<${LoginView} />`;
+  }
+
   return html`
     <div className="min-h-screen bg-slate-50 flex">
       <${Sidebar}
@@ -221,11 +247,13 @@ export function App() {
         pendingRenewalsCount=${pendingRenewalsCount}
         urgentRenewalsCount=${urgentRenewalsCount}
         unreadEmailsCount=${unreadEmailsCount}
-        managerName=${state.settings.managerName}
+        managerName=${authUser.displayName || authUser.email?.split('@')[0] || state.settings.managerName}
         managerRole=${state.settings.managerRole}
         isOpenMobile=${mobileMenuOpen}
         onCloseMobile=${() => setMobileMenuOpen(false)}
         onResetDemo=${handleResetDemo}
+        userEmail=${authUser.email}
+        onLogout=${logoutUser}
       />
 
       <!-- Contenu principal -->
